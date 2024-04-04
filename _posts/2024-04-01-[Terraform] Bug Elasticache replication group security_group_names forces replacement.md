@@ -1,8 +1,8 @@
 ---
-title: "[Terraform] Bug Elasticache replication group security_group_names forces replacement"
+title: "[Terraform] [Bug] Elasticache replication group security_group_names forces replacement"
 date: 2024-04-01 17:38:00 +0900
-categories: [TroubleShooting, Terraform]
-tags: [aws, terraform, troubleshooting]
+categories: [Terraform]
+tags: [aws, terraform, troubleshooting, bug]
 ---
 
 # 문제 상황
