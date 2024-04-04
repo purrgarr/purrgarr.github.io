@@ -1,6 +1,6 @@
 ---
 title: "[Terraform] Provider Mirror (File System & Network)"
-date: 2024-04-01 17:38:00 +0900
+date: 2024-03-20 17:38:00 +0900
 categories: [Terraform]
 tags: [iac, terraform]
 ---
