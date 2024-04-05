@@ -8,6 +8,7 @@ tags: [aws, troubleshooting, error, http_proxy]
 # 문제 상황
 * HTTP 프록시를 통해 `aws cli`를 사용하기 위해 시스템 환경변수 `HTTP_PROXY`, `HTTPS_PROXY` 설정
 * `aws sso login`시 SSL validation 에러 발생
+
 ```bash
 $ aws sso login
 
@@ -20,6 +21,7 @@ SSL validation failed for https://oidc.ap-northeast-2.amazonaws.com/device_autho
 
 * 에러 메시지를 보면 `https://oidc.ap-northeast-2.amazonaws.com/device_authorization`에 대한 인증서 문제인 것을 알 수 있다.
 * 먼저 프록시를 통하지 않고 인터넷을 통해 curl 명령을 실행하여 로컬 CA 파일 확보 -> `/etc/ssl/cert.pem`
+
 ```bash
 $  curl -v   https://oidc.ap-northeast-2.amazonaws.com/device_authorization
 
@@ -31,7 +33,9 @@ $  curl -v   https://oidc.ap-northeast-2.amazonaws.com/device_authorization
 *  CAfile: /etc/ssl/cert.pem
 ...중략...
 ```
+
 * 확보한 CA 파일의 경로를 시스템 환경변수 `AWS_CA_BUNDLE`에 설정
+
 ```bash
 export AWS_CA_BUNDLE=/etc/ssl/cert.pem
 ```
