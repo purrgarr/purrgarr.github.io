@@ -29,7 +29,7 @@ export AWS_REGION=ap-northeast-2
 export AWS_B64ENCODED_CREDENTIALS=$(clusterawsadm bootstrap credentials encode-as-profile)
 ```
 
-`AWS_B64ENCODED_CREDENTIALS`<sup>[1](#AWS_B64ENCODED_CREDENTIALS)</sup> 값은 Secret 데이터로 배포되고 controller에서 사용한다.
+`AWS_B64ENCODED_CREDENTIALS` 값은 Secret 데이터로 배포되고 controller에서 사용한다.
 
 
 ### ClusterAPI 설치
@@ -71,7 +71,7 @@ region = ap-northeast-2
 
 aws_session_token = IQoJb3JpZ2luX2VjEPj...
 ```
-* 자격증명 내용은 앞에서 `AWS_B64ENCODED_CREDENTIALS`변수에 인코딩 되어 들어간 값이다.<sup>[1](#AWS_B64ENCODED_CREDENTIALS)</sup>
+* 자격증명 내용은 앞에서 `AWS_B64ENCODED_CREDENTIALS`변수에 인코딩 되어 들어간 값이다.
 * 해당 자격증명은 임시 자격증명으로 `aws_session_token`이 만료되면 더이상 사용이 불가능하다.
 
 
